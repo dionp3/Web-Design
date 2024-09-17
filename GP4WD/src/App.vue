@@ -1,15 +1,7 @@
 <template>
   <div id="app">
     <Navbar />
-    <div id="home">
-      <h1>Welcome to Home</h1>
-    </div>
-    <div id="books">
-      <h1>Books Section</h1>
-    </div>
-    <div id="about">
-      <h1>About Us Section</h1>
-    </div>
+    <router-view /> 
   </div>
 </template>
 
@@ -17,6 +9,7 @@
 import Navbar from "./components/Navigation.vue";
 
 export default {
+  name: 'App',
   components: {
     Navbar,
   },
@@ -33,6 +26,10 @@ body {
 
 div {
   color: rgb(255, 174, 0);
+}
+
+#app {
+  padding: 20px;
 }
 
 #home, #books, #about {
