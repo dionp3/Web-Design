@@ -17,22 +17,19 @@ export default {
 </script>
 
 <style>
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: beige;
-}
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+  }
 
-div {
-  color: rgb(255, 174, 0);
-}
+  #app {
+    margin: 0;
+    padding: 0;
+  }
 
-#app {
-  padding: 20px;
-}
-
-#home, #books, #about {
-  padding: 20px;
-}
+  #home, #books, #about {
+    padding: 20px;
+  }
 </style>
