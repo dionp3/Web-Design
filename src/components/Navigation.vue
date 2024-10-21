@@ -1,109 +1,72 @@
 <template>
-    <nav class="navbar">
-      <div class="logo">
-        <!-- <img src="@/assets/logo.png" alt="Logo" /> -->
-      </div>
-      <ul class="nav-links">
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/books">Books</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-      </ul>
-      <div class="hamburger" @click="toggleMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        menuOpen: false,
-      };
-    },
-    methods: {
-      toggleMenu() {
-        this.menuOpen = !this.menuOpen;
-        const navLinks = document.querySelector(".nav-links");
-        navLinks.classList.toggle("active");
-      },
-    },
-  };
-  </script>
-  
-  <style scoped>
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #777777;
-    padding: 10px 20px;
-    width: 100%; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000; 
-  }
+  <nav class="bg-white text-black fixed w-full z-50 flex items-center justify-between p-4 shadow-lg">
+    <div class="flex items-center space-x-4">
+      <router-link to="/" class="w-30 h-12">
+        <img src="../assets/img/Logo.png" alt="Logo" class="w-full h-full object-contain" />
+      </router-link>
+    </div>
 
-  .logo img {
-    height: 40px;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .nav-links li a:hover {
-    background-color: #777777;
-    color: #f0a500;
-  }
-  
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .hamburger span {
-    background-color: white;
-    height: 4px;
-    width: 25px;
-    margin: 3px;
-  }
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      right: 0;
-      top: 60px;
-      background-color: #333;
-      width: 100%;
-      text-align: center;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .hamburger {
-      display: flex;
-    }
-  
-    .nav-links li {
-      margin: 10px 0;
-    }
-  }
-  </style>
-  
+    <div class="w-1/3">
+      <input
+        type="text"
+        placeholder="Search..."
+        class="w-full p-2 rounded-full bg-gray-200 border-2 border-black text-black focus:outline-none focus:ring focus:ring-yellow-400"
+      />
+    </div>
+
+    <ul
+      :class="[menuOpen ? 'block flex-col absolute top-16 right-0 w-full bg-gray-100 py-4 md:py-0 md:bg-transparent' : 'hidden', 'md:flex space-x-6 items-center']"
+      class="text-center"
+    >
+      <li><router-link to="/books" class="hover:text-yellow-400 py-2 md:py-0">Books</router-link></li>
+      <li><router-link to="/categories" class="hover:text-yellow-400 py-2 md:py-0">Categories</router-link></li>
+      <li><router-link to="/about" class="hover:text-yellow-400 py-2 md:py-0">About Us</router-link></li>
+
+      <div class="flex space-x-2">
+        <router-link to="/login" class="bg-white-400 text-black py-2 px-4 rounded-full border-4 border-black hover:bg-[#FFAE00]">Login</router-link>
+        <router-link to="/register" class="bg-[#FFAE00] text-black py-2 px-4 rounded-full border-4 border-black hover:bg-white-400">Register</router-link>
+      </div>
+    </ul>
+
+    <div class="md:hidden flex flex-col space-y-1 cursor-pointer" @click="toggleMenu">
+      <span class="block h-0.5 w-6 bg-black"></span>
+      <span class="block h-0.5 w-6 bg-black"></span>
+      <span class="block h-0.5 w-6 bg-black"></span>
+    </div>
+  </nav>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      menuOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen; 
+    },
+    checkScreenWidth() {
+      if (window.innerWidth >= 768) {
+        this.menuOpen = false;
+      }
+    },
+  },
+  created() {
+    this.checkScreenWidth();
+  },
+  mounted() {
+    window.addEventListener('resize', this.checkScreenWidth);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.checkScreenWidth);
+  },
+};
+</script>
+
+<style scoped>
+nav {
+  transition: all 0.3s ease-in-out;
+}
+</style>
