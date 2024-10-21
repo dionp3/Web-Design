@@ -1,12 +1,12 @@
 <template>
     <div id="book-icon">
-        <h1 id="book">Logo Buku</h1>
+        <img src="../../assets/img/bookLogo.png" alt="bookLogo">
     </div>
 </template>
 
 <style scoped>
-    #book-icon #book{
-        color: black;
-        font-size: 4em;
+    #book-icon img{
+        margin: 0 50px;
+        width: 150px;        
     }
 </style>
