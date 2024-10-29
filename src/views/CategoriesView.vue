@@ -117,7 +117,7 @@
 
 <script>
 export default {
-  name: "CategoryDetail",
+  name: "CategoriesView",
 };
 </script>
 

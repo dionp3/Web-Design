@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import BooksView from '../views/BooksView.vue';
 import AboutView from '../views/AboutView.vue';
-import NavigationCategories from '../views/NavigationCategories.vue';
+import CategoriesView from '../views/CategoriesView.vue';
 
 const routes = [
   {
@@ -23,7 +23,7 @@ const routes = [
   {
     path: '/categories',
     name: 'categories',
-    component: NavigationCategories,
+    component: CategoriesView,
   },
 ];
 
