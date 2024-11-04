@@ -22,9 +22,17 @@
       <li><router-link to="/categories" class="hover:text-yellow-400 py-2 md:py-0">Categories</router-link></li>
       <li><router-link to="/about" class="hover:text-yellow-400 py-2 md:py-0">About Us</router-link></li>
 
-      <div class="flex space-x-2">
+      <!-- Tampilkan Login/Register jika belum login -->
+      <div v-if="!isLoggedIn" class="flex space-x-2">
         <router-link to="/login" class="bg-white-400 text-black py-2 px-4 rounded-full border-4 border-black hover:bg-[#FFAE00]">Login</router-link>
         <router-link to="/register" class="bg-[#FFAE00] text-black py-2 px-4 rounded-full border-4 border-black hover:bg-white-400">Register</router-link>
+      </div>
+
+      <!-- Tampilkan icon profil jika sudah login -->
+      <div v-else class="flex items-center space-x-4">
+        <router-link to="/profile">
+          <img src="../assets/img/profile-icon.png" alt="Profile" class="w-8 h-8 rounded-full hover:shadow-lg"/>
+        </router-link>
       </div>
     </ul>
 
@@ -41,6 +49,7 @@ export default {
   data() {
     return {
       menuOpen: false,
+      isLoggedIn: true, // Set to true if user is logged in
     };
   },
   methods: {
@@ -59,7 +68,7 @@ export default {
   mounted() {
     window.addEventListener('resize', this.checkScreenWidth);
   },
-  beforeDestroy() {
+  beforeUnmount() { // Vue 3 syntax
     window.removeEventListener('resize', this.checkScreenWidth);
   },
 };

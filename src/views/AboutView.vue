@@ -27,21 +27,28 @@
 </template>
 
 <script>
+import WirantoImage from '@/assets/img/Wiranto.png';
+import GlennImage from '@/assets/img/Glenn.png';
+import DionImage from '@/assets/img/Dion.png';
+import IqbalImage from '@/assets/img/Iqbal.png';
+import HanafiImage from '@/assets/img/Hanafi.png';
+
 export default {
   name: "AboutUs",
   data() {
     return {
       members: [
-        { id: "11221030", name: "Wiranto", image: "@/assets/img/Wiranto.png" },
-        { id: "11221070", name: "Glen Gladly Gessong", image: "@/assets/img/Glenn.png" },
-        { id: "11221058", name: "Dion Prayoga", image: "@/assets/img/Dion.png" },
-        { id: "11221034", name: "Iqbal Fahrozi", image: "@/assets/img/Iqbal.png" },
-        { id: "11221022", name: "Hanafi Mas'uul P.", image: "@/assets/img/Hanafi.png" },
+        { id: "11221030", name: "Wiranto", image: WirantoImage },
+        { id: "11221070", name: "Glen Gladly Gessong", image: GlennImage },
+        { id: "11221058", name: "Dion Prayoga", image: DionImage },
+        { id: "11221034", name: "Iqbal Fahrozi", image: IqbalImage },
+        { id: "11221022", name: "Hanafi Mas'uul P.", image: HanafiImage },
       ],
     };
   },
 };
 </script>
+
 
 <style scoped>
 /* Tambahan styling jika diperlukan */

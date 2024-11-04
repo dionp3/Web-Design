@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import BooksView from '../views/BooksView.vue';
 import AboutView from '../views/AboutView.vue';
 import CategoriesView from '../views/CategoriesView.vue';
+import AboutProfile from '../views/AboutProfile.vue';
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/categories',
     name: 'categories',
     component: CategoriesView,
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: AboutProfile,
   },
 ];
 
