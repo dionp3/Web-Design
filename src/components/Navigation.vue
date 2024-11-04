@@ -31,7 +31,7 @@
       <!-- Tampilkan icon profil jika sudah login -->
       <div v-else class="flex items-center space-x-4">
         <router-link to="/profile">
-          <img src="../assets/img/profile-icon.png" alt="Profile" class="w-8 h-8 rounded-full hover:shadow-lg"/>
+          <img src="../assets/img/iqbal.png" alt="Profile" class="w-8 h-8 rounded-full hover:shadow-lg"/>
         </router-link>
       </div>
     </ul>
@@ -44,34 +44,59 @@
   </nav>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      menuOpen: false,
-      isLoggedIn: true, // Set to true if user is logged in
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.menuOpen = !this.menuOpen; 
-    },
-    checkScreenWidth() {
-      if (window.innerWidth >= 768) {
-        this.menuOpen = false;
-      }
-    },
-  },
-  created() {
-    this.checkScreenWidth();
-  },
-  mounted() {
-    window.addEventListener('resize', this.checkScreenWidth);
-  },
-  beforeUnmount() { // Vue 3 syntax
-    window.removeEventListener('resize', this.checkScreenWidth);
-  },
-};
+<script lang="ts" setup>
+import { onMounted, onUnmounted, ref } from 'vue';
+
+const menuOpen = ref(false);  // Use ref for reactivity
+const isLoggedIn = ref(true);  // If you want to track the logged-in state
+
+const toggleMenu = () => {
+  menuOpen.value = !menuOpen.value;  // Access the value with .value
+}
+
+const checkScreenWidth = () => {
+  if (window.innerWidth >= 768) {
+    menuOpen.value = false;  // Access the value with .value
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('resize', checkScreenWidth);
+});
+
+// Clean up the event listener on unmount
+onUnmounted(() => {
+  window.removeEventListener('resize', checkScreenWidth);
+});
+// export default {
+//   data() {
+//     return {
+//       menuOpen: false,
+//       isLoggedIn: true, // Set to true if user is logged in
+//     };
+//   },
+//   methods: {
+//     toggleMenu() {
+//       this.menuOpen = !this.menuOpen; 
+//     },
+//     checkScreenWidth() {
+//       if (window.innerWidth >= 768) {
+//         this.menuOpen = false;
+//       }
+//     },
+//   },
+//   // created() {
+//   //   this.checkScreenWidth();
+//   // },
+//   // mounted() {
+//   //   window.addEventListener('resize', this.checkScreenWidth);
+//   // },
+//   // beforeUnmount() { // Vue 3 syntax
+//   //   window.removeEventListener('resize', this.checkScreenWidth);
+//   // },
+// };
+
+
 </script>
 
 <style scoped>
