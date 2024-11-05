@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue';
 import BooksView from '../views/BooksView.vue';
 import AboutView from '../views/AboutView.vue';
 import CategoriesView from '../views/CategoriesView.vue';
+import Login from '@/views/Login.vue';
+import Register from '@/views/Register.vue';
 
 const routes = [
   {
@@ -24,6 +26,16 @@ const routes = [
     path: '/categories',
     name: 'categories',
     component: CategoriesView,
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register,
   },
 ];
 
