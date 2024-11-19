@@ -16,7 +16,7 @@
 
 <template>
     <div class="bg-gray-100">
-      <section class="relative bg-cover bg-center h-[500px] text-center text-white" style="background-image: url('/path-to-background-image.jpg')">
+      <section class="relative bg-cover bg-center h-[500px] text-center text-white" style="background-image: url('../assets/img/bg-img.jpeg')">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="relative z-10 p-8">
           <h1 class="text-4xl font-bold">KREASI KITA</h1>
@@ -39,7 +39,7 @@
         <h2 class="text-2xl font-semibold text-center mb-8">Populer</h2>
         <div class="flex overflow-x-auto gap-4">
           <div class="min-w-[200px] bg-white rounded-lg shadow p-4 text-center">
-            <!-- <img src="/path-to-image.jpg" alt="Book" class="h-40 w-auto mx-auto" /> -->
+            <img src="../assets/img/bg-img.jpeg" alt="Book" class="h-40 w-auto mx-auto" />
             <h3 class="mt-4 font-semibold">Romeo & Juliet</h3>
             <p class="text-gray-600">Rp 100,000</p>
           </div>
@@ -51,7 +51,7 @@
         <h2 class="text-2xl font-semibold text-center mb-8">Creator</h2>
         <div class="flex overflow-x-auto gap-4">
           <div class="min-w-[100px] flex flex-col items-center">
-            <!-- <img src="/path-to-creator-image.jpg" alt="Creator" class="h-24 w-24 rounded-full" /> -->
+            <img src="../assets/img/bg-img.jpeg" alt="Creator" class="h-24 w-24 rounded-full" />
             <p class="mt-4 font-semibold">Aj</p>
           </div>
           <!-- Repeat for other creators -->
