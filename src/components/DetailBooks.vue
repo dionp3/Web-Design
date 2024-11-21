@@ -1,100 +1,123 @@
 <template>
-    <div class="bg-gray-100 min-h-screen p-10">
-      <!-- Container utama -->
-      <div class="bg-white max-w-5xl mx-auto shadow-lg rounded-lg overflow-hidden">
-        <!-- Header -->
-        <header class="bg-orange-500 p-4 flex items-center justify-between">
-          <h1 class="text-white text-2xl font-bold">KREASI KITA</h1>
-          <div class="relative w-1/2">
-            <input
-              type="text"
-              placeholder="Search"
-              class="w-full p-2 rounded-full border border-gray-300 focus:outline-none"
-            />
-          </div>
-          <nav class="text-white font-semibold space-x-6">
-            <a href="#" class="hover:text-gray-200">Books</a>
-            <a href="#" class="hover:text-gray-200">Categories</a>
-            <a href="#" class="hover:text-gray-200">About Us</a>
-          </nav>
-          <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
-        </header>
-  
-        <!-- Konten -->
-        <div class="flex">
-          <!-- Gambar Buku -->
-          <div class="w-1/2 p-10 bg-orange-100 flex justify-center items-center">
-            <img
-              src="https://dummyimage.com/300x400/000/fff&text=Atomic+Habits"
-              alt="Cover Buku"
-              class="rounded-lg shadow-lg max-h-80"
-            />
-          </div>
-  
-          <!-- Detail Buku -->
-          <div class="w-1/2 p-8">
-            <!-- Judul Buku -->
-            <h2 class="text-3xl font-bold mb-2">Judul Buku</h2>
-            <p class="text-xl text-gray-700 mb-4">Rp 1.000.000</p>
-  
-            <!-- Tombol Aksi -->
-            <div class="space-x-2 mb-6">
-              <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">
-                BUY
-              </button>
-              <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">
-                + CART
-              </button>
-              <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
-                GIVE TIPS
-              </button>
-            </div>
-  
-            <!-- Deskripsi Buku -->
-            <h3 class="text-xl font-semibold mb-2">Deskripsi</h3>
-            <p class="text-gray-600 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget vehicula lectus. Vivamus accumsan maximus nunc et aliquet.
-            </p>
-  
-            <!-- Nama Kreator -->
-            <h3 class="text-xl font-semibold mb-2">Kreator</h3>
-            <p class="text-gray-600">Nama Kreator</p>
-          </div>
-        </div>
+  <div class="container mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Gambar Buku -->
+    <div>
+      <img :src="book.image" :alt="book.title" class="w-full rounded-md shadow-md" />
+    </div>
+
+    <!-- Detail Buku -->
+    <div>
+      <h1 class="text-3xl font-bold text-gray-900">{{ book.title }}</h1>
+      <p class="text-xl text-gray-600 mt-2">{{ book.price }}</p>
+
+      <div class="mt-4 flex gap-4">
+        <button class="bg-yellow-500 text-white px-6 py-2 rounded-md shadow-md">Buy</button>
+        <button class="bg-gray-300 text-black px-6 py-2 rounded-md shadow-md">+ Cart</button>
+        <button class="bg-orange-600 text-white px-6 py-2 rounded-md shadow-md">Give Tips</button>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-lg font-bold text-gray-900">Deskripsi</h2>
+        <p class="text-gray-600 mt-2 text-justify">
+          {{ book.description || "Deskripsi buku belum tersedia." }}
+        </p>
+      </div>
+
+      <div class="mt-6">
+        <h2 class="text-lg font-bold text-gray-900">Kreator</h2>
+        <p class="text-gray-600">{{ book.creator || "Nama kreator tidak diketahui." }}</p>
       </div>
     </div>
-  </template>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "DetailBooks",
+
+  props: ["id"], 
   
-  <script>
-  export default {
-    name: "DetailBuku",
-    props: {
-      // Props dapat digunakan jika Anda ingin membuat komponen ini dinamis
-      judul: {
-        type: String,
-        default: "Judul Buku"
+  data() {
+    return {
+      book: {}, 
+    };
+  },
+
+  mounted() {
+    const books = [
+      {
+        id: "1",
+        image: "https://example.com/atomic-habits.jpg",
+        title: "Romeo & Juliet",
+        price: "Rp 100.000",
+        description: "Romeo dan Juliet adalah drama tragedi yang mengisahkan cinta terlarang antara dua remaja dari keluarga yang bermusuhan, Montague dan Capulet. Kisah ini mengeksplorasi tema cinta, takdir, dan konflik keluarga.",
+        creator: "William Shakespeare",
       },
-      harga: {
-        type: Number,
-        default: 1000000
+      {
+        id: "2",
+        image: "https://example.com/atomic-habits.jpg",
+        title: "Atomic Habits",
+        price: "Rp 98.500",
+        description: "Buku ini membahas bagaimana perubahan kecil dalam kebiasaan sehari-hari dapat menghasilkan hasil yang luar biasa. James Clear menawarkan strategi praktis untuk membentuk kebiasaan baik dan menghilangkan kebiasaan buruk, dengan pendekatan berbasis sains dan contoh nyata",
+        creator: "James Clear",
       },
-      deskripsi: {
-        type: String,
-        default: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      {
+        id: "3",
+        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        title: "To Kill a Mockingbird",
+        price: "Rp 156.000",
+        description: "Novel ini berlatar di Alabama pada era 1930-an dan menceritakan kisah Scout Finch, seorang gadis muda, yang menyaksikan ayahnya, Atticus Finch, seorang pengacara, membela seorang pria kulit hitam yang dituduh memperkosa wanita kulit putih. Buku ini mengeksplorasi isu rasial, keadilan, dan moralitas.",
+        creator: "Harper Lee",
       },
-      kreator: {
-        type: String,
-        default: "Nama Kreator"
+      {
+        id: "4",
+        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        title: "Thinking, Fast and Slow",
+        price: "Rp 148.000",
+        description: "Dalam buku ini, Daniel Kahneman, seorang psikolog dan peraih Nobel Ekonomi, menjelaskan dua sistem berpikir manusia: Sistem 1 yang cepat dan intuitif, serta Sistem 2 yang lambat dan logis. Buku ini mengungkap bagaimana kedua sistem ini mempengaruhi pengambilan keputusan dan penilaian kita sehari-hari.",
+        creator: "Daniel Kahneman",
       },
-      cover: {
-        type: String,
-        default: "https://dummyimage.com/300x400/000/fff&text=Atomic+Habits"
-      }
-    }
-  };
-  </script>
-  
-  <style scoped>
-  /* Tidak ada styling tambahan di sini, semua menggunakan Tailwind */
-  </style>
-  
+      {
+        id: "5",
+        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        title: "Rich Dad Poor Dad",
+        price: "Rp 173.938",
+        description: "Buku ini menceritakan pengalaman penulis dengan dua figur ayah: ayah kandungnya (Poor Dad) dan ayah sahabatnya (Rich Dad). Melalui perbandingan pandangan kedua ayah tersebut tentang uang dan investasi, Kiyosaki memberikan wawasan tentang literasi keuangan dan cara mencapai kebebasan finansial.",
+        creator: "Robert T. Kiyosaki",
+      },
+      {
+        id: "6",
+        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        title: "The Catcher in the Rye",
+        price: "Rp 127.640",
+        description: "Novel ini mengikuti perjalanan Holden Caulfield, seorang remaja yang mengalami krisis identitas dan pemberontakan terhadap norma masyarakat. Melalui narasi Holden, buku ini mengeksplorasi tema alienasi, pencarian jati diri, dan kritik terhadap kemunafikan sosial.",
+        creator: "J.D. Salinger",
+      },
+      {
+        id: "7",
+        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        title: "The Silent Patient",
+        price: "Rp 79.200",
+        description: "Thriller psikologis ini berkisah tentang Alicia Berenson, seorang pelukis terkenal yang tiba-tiba membunuh suaminya dan memilih untuk tidak berbicara lagi. Psikoterapis Theo Faber tertarik untuk mengungkap alasan di balik keheningan Alicia dan kebenaran di balik peristiwa tersebut.",
+        creator: "Alex Michaelides",
+      },
+      {
+        id: "8",
+        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        title: "Man's Search for Meaning",
+        price: "Rp 67.150",
+        description: "Buku ini adalah memoar Viktor Frankl tentang pengalamannya sebagai tahanan di kamp konsentrasi Nazi. Frankl, seorang psikiater, mengembangkan logoterapi, sebuah pendekatan yang menekankan pentingnya menemukan makna hidup bahkan dalam situasi paling sulit.",
+        creator: "Viktor E. Frankl",
+      },
+    ];
+
+    this.book = books.find((book) => book.id === this.id) || {};
+  },
+};
+</script>
+
+<style scoped>
+.container {
+  max-width: 1200px;
+}
+</style>
