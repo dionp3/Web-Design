@@ -5,6 +5,7 @@ import AboutView from '../views/AboutView.vue';
 import CategoriesView from '../views/CategoriesView.vue';
 import Login from '@/views/Login.vue';
 import Register from '@/views/Register.vue';
+import DetailBooks from "../components/DetailBooks.vue";
 
 const routes = [
   {
@@ -36,6 +37,12 @@ const routes = [
     path: '/register',
     name: 'register',
     component: Register,
+  },
+  {
+    path: '/books/:id',
+    name: 'bookDetail',
+    component: DetailBooks,
+    props: true,
   },
 ];
 
