@@ -1,7 +1,8 @@
 <!-- src/components/Book.vue -->
 <template>
     <div @click="goToDetail" class="border rounded-lg p-4 shadow-md hover:shadow-lg transition">
-      <img :src="image" alt="Book cover" class="h-48 w-full object-contain rounded-md mb-4" />
+      <img :src="image" alt="Book cover" class="h-80 w-full object-fill rounded-md mb-4" />
+      <image/>
       <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ title }}</h3>
       <p class="text-gray-600 text-sm">{{ price }}</p>
     </div>

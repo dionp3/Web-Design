@@ -1,12 +1,12 @@
 <template>
-  <div class="container mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="container mx-auto p-6 flex flex-col md:flex-row items-center gap-4 justify-center min-h-screen">
     <!-- Gambar Buku -->
     <div>
-      <img :src="book.image" :alt="book.title" class="w-full rounded-md shadow-md" />
+      <img :src="book.image" :alt="book.title" class="h-85 object-contain rounded-md shadow-md mb-4" />
     </div>
 
     <!-- Detail Buku -->
-    <div>
+    <div class="flex flex-col md:flex-1">
       <h1 class="text-3xl font-bold text-gray-900">{{ book.title }}</h1>
       <p class="text-xl text-gray-600 mt-2">{{ book.price }}</p>
 
@@ -47,7 +47,7 @@ export default {
     const books = [
       {
         id: "1",
-        image: "https://example.com/atomic-habits.jpg",
+        image: "/img_books/romeo_and_juliet.jpg",
         title: "Romeo & Juliet",
         price: "Rp 100.000",
         description: "Romeo dan Juliet adalah drama tragedi yang mengisahkan cinta terlarang antara dua remaja dari keluarga yang bermusuhan, Montague dan Capulet. Kisah ini mengeksplorasi tema cinta, takdir, dan konflik keluarga.",
@@ -55,7 +55,7 @@ export default {
       },
       {
         id: "2",
-        image: "https://example.com/atomic-habits.jpg",
+        image: "/img_books/atomic_habits.jpg",
         title: "Atomic Habits",
         price: "Rp 98.500",
         description: "Buku ini membahas bagaimana perubahan kecil dalam kebiasaan sehari-hari dapat menghasilkan hasil yang luar biasa. James Clear menawarkan strategi praktis untuk membentuk kebiasaan baik dan menghilangkan kebiasaan buruk, dengan pendekatan berbasis sains dan contoh nyata",
@@ -63,7 +63,7 @@ export default {
       },
       {
         id: "3",
-        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        image: "/img_books/to_kill_a_mockingbird.jpg",
         title: "To Kill a Mockingbird",
         price: "Rp 156.000",
         description: "Novel ini berlatar di Alabama pada era 1930-an dan menceritakan kisah Scout Finch, seorang gadis muda, yang menyaksikan ayahnya, Atticus Finch, seorang pengacara, membela seorang pria kulit hitam yang dituduh memperkosa wanita kulit putih. Buku ini mengeksplorasi isu rasial, keadilan, dan moralitas.",
@@ -71,7 +71,7 @@ export default {
       },
       {
         id: "4",
-        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        image: "/img_books/thinking_fast_and_slow.jpg",
         title: "Thinking, Fast and Slow",
         price: "Rp 148.000",
         description: "Dalam buku ini, Daniel Kahneman, seorang psikolog dan peraih Nobel Ekonomi, menjelaskan dua sistem berpikir manusia: Sistem 1 yang cepat dan intuitif, serta Sistem 2 yang lambat dan logis. Buku ini mengungkap bagaimana kedua sistem ini mempengaruhi pengambilan keputusan dan penilaian kita sehari-hari.",
@@ -79,7 +79,7 @@ export default {
       },
       {
         id: "5",
-        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        image: "/img_books/rich_dad_poor_dad.jpg",
         title: "Rich Dad Poor Dad",
         price: "Rp 173.938",
         description: "Buku ini menceritakan pengalaman penulis dengan dua figur ayah: ayah kandungnya (Poor Dad) dan ayah sahabatnya (Rich Dad). Melalui perbandingan pandangan kedua ayah tersebut tentang uang dan investasi, Kiyosaki memberikan wawasan tentang literasi keuangan dan cara mencapai kebebasan finansial.",
@@ -87,7 +87,7 @@ export default {
       },
       {
         id: "6",
-        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        image: "/img_books/the_catcher_in_the_rye.jpg",
         title: "The Catcher in the Rye",
         price: "Rp 127.640",
         description: "Novel ini mengikuti perjalanan Holden Caulfield, seorang remaja yang mengalami krisis identitas dan pemberontakan terhadap norma masyarakat. Melalui narasi Holden, buku ini mengeksplorasi tema alienasi, pencarian jati diri, dan kritik terhadap kemunafikan sosial.",
@@ -95,7 +95,7 @@ export default {
       },
       {
         id: "7",
-        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        image: "/img_books/the_silent_patient.jpg",
         title: "The Silent Patient",
         price: "Rp 79.200",
         description: "Thriller psikologis ini berkisah tentang Alicia Berenson, seorang pelukis terkenal yang tiba-tiba membunuh suaminya dan memilih untuk tidak berbicara lagi. Psikoterapis Theo Faber tertarik untuk mengungkap alasan di balik keheningan Alicia dan kebenaran di balik peristiwa tersebut.",
@@ -103,7 +103,7 @@ export default {
       },
       {
         id: "8",
-        image: "https://example.com/to-kill-a-mockingbird.jpg",
+        image: "/img_books/mans_search_for_meaning.jpg",
         title: "Man's Search for Meaning",
         price: "Rp 67.150",
         description: "Buku ini adalah memoar Viktor Frankl tentang pengalamannya sebagai tahanan di kamp konsentrasi Nazi. Frankl, seorang psikiater, mengembangkan logoterapi, sebuah pendekatan yang menekankan pentingnya menemukan makna hidup bahkan dalam situasi paling sulit.",
@@ -119,5 +119,7 @@ export default {
 <style scoped>
 .container {
   max-width: 1200px;
+  padding-left: 300px;
+  padding-right: 300px;
 }
 </style>
