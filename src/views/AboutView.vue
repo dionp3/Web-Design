@@ -27,6 +27,7 @@
 </template>
 
 <script>
+
 export default {
   name: "AboutUs",
   data() {
@@ -42,6 +43,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 /* Tambahan styling jika diperlukan */

@@ -22,6 +22,7 @@
       <li><router-link to="/categories" class="hover:text-[#FD7F20] hover:bg-white py-2 md:py-0">Categories</router-link></li>
       <li><router-link to="/about" class="hover:text-[#FD7F20] hover:bg-white py-2 md:py-0">About Us</router-link></li>
 
+      <!-- Tampilkan Login/Register jika belum login -->
       <div class="flex space-x-2">
         <router-link to="/login" class="bg-white-400 text-black py-2 px-4 rounded-full border-2 border-black hover:bg-[#FFAE00]">Log in</router-link>
         <router-link to="/register" class="bg-[#FFAE00] text-black py-2 px-4 rounded-full border-2 border-black hover:bg-white">Register</router-link>
@@ -36,11 +37,36 @@
   </nav>
 </template>
 
-<script>
+<script >
+// import { onMounted, onUnmounted, ref } from 'vue';
+
+// const menuOpen = ref(false);  // Use ref for reactivity
+// const isLoggedIn = ref(true);  // If you want to track the logged-in state
+
+// const toggleMenu = () => {
+//   menuOpen.value = !menuOpen.value;  // Access the value with .value
+// }
+
+// const checkScreenWidth = () => {
+//   if (window.innerWidth >= 768) {
+//     menuOpen.value = false;  // Access the value with .value
+//   }
+// }
+
+// onMounted(() => {
+//   window.addEventListener('resize', checkScreenWidth);
+// });
+
+// // Clean up the event listener on unmount
+// onUnmounted(() => {
+//   window.removeEventListener('resize', checkScreenWidth);
+// });
+
 export default {
   data() {
     return {
       menuOpen: false,
+      isLoggedIn: true, // Set to true if user is logged in
     };
   },
   methods: {
@@ -59,10 +85,12 @@ export default {
   mounted() {
     window.addEventListener('resize', this.checkScreenWidth);
   },
-  beforeDestroy() {
+  beforeUnmount() { // Vue 3 syntax
     window.removeEventListener('resize', this.checkScreenWidth);
   },
 };
+
+
 </script>
 
 <style scoped>
