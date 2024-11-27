@@ -34,7 +34,7 @@ export default {
       members: [
         { id: "11221030", name: "Wiranto", image: "@/assets/img/Wiranto.png" },
         { id: "11221070", name: "Glen Gladly Gessong", image: "@/assets/img/Glenn.png" },
-        { id: "11221058", name: "Dion Prayoga", image: "@/assets/img/Dion.png" },
+        { id: "11221058", name: "Dion Prayoga", image: "../assets/img/Dion.png" },
         { id: "11221034", name: "Iqbal Fahrozi", image: "@/assets/img/Iqbal.png" },
         { id: "11221022", name: "Hanafi Mas'uul P.", image: "@/assets/img/Hanafi.png" },
       ],
