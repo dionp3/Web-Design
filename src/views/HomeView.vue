@@ -122,7 +122,7 @@
 
     <div>
       <!-- Join Section -->
-      <section class="relative py-12 text-center" style="background-image: url('bg1.png')">
+      <section class="relative py-12 text-center" style="background-image: url('bg1.jpg')">
         <div class="absolute inset-0 bg-white opacity-80"></div>
         <div class="flex justify-center relative flex-col gap-20 md:flex-row items-center md:space-x-8 mb-5">
           <h2 class="text-2xl text-[#FD7F20] font-bold mt-8 mb-8">Join Kreasi Kita and be part of the creator and fan community!</h2>
