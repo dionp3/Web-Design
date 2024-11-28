@@ -35,6 +35,11 @@ const routes = [
     component: Login,
   },
   {
+    path: '/aboutprofile',
+    name: 'aboutprofile',
+    component: AboutProfile,
+  },
+  {
     path: '/register',
     name: 'register',
     component: Register,

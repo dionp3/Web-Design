@@ -18,15 +18,23 @@
       :class="[menuOpen ? 'block flex-col absolute top-16 right-0 w-full bg-gray-100 py-4 md:py-0 md:bg-transparent' : 'hidden', 'md:flex space-x-6 items-center']"
       class="text-center"
     >
-      <li><router-link to="/books" class="hover:text-[#FD7F20] hover:bg-white py-2  md:py-0">Books</router-link></li>
-      <li><router-link to="/categories" class="hover:text-[#FD7F20] hover:bg-white py-2 md:py-0">Categories</router-link></li>
-      <li><router-link to="/about" class="hover:text-[#FD7F20] hover:bg-white py-2 md:py-0">About Us</router-link></li>
+    <li><router-link to="/books" class="hover:text-[#FD7F20] hover:bg-white py-2 just md:py-0">Books</router-link></li>
+    <li><router-link to="/categories" class="hover:text-[#FD7F20] hover:bg-white py-2 md:py-0">Categories</router-link></li>
+    <li><router-link to="/about" class="hover:text-[#FD7F20] hover:bg-white py-2 md:py-0">About Us</router-link></li>
 
-      <!-- Tampilkan Login/Register jika belum login -->
-      <div class="flex space-x-2">
-        <router-link to="/login" class="bg-white-400 text-black py-2 px-4 rounded-full border-2 border-black hover:bg-[#FFAE00]">Log in</router-link>
-        <router-link to="/register" class="bg-[#FFAE00] text-black py-2 px-4 rounded-full border-2 border-black hover:bg-white">Register</router-link>
+    <!-- Tampilkan Login/Register jika belum login -->
+    <div v-if="!isLoggedIn" class="flex space-x-2">
+      <router-link to="/login" class="bg-white-400 text-black py-2 px-4 rounded-full border-2 border-black hover:bg-[#FFAE00]">Log in</router-link>
+      <router-link to="/register" class="bg-[#FFAE00] text-black py-2 px-4 rounded-full border-2 border-black hover:bg-white">Register</router-link>
+    </div>
+
+      <!-- Tampilkan icon profil jika sudah login -->
+      <div v-else class="flex items-center space-x-4">
+        <router-link to="/aboutprofile">
+          <img src="../assets/img/iqbal.png" alt="Profile" class="w-8 h-8 rounded-full hover:shadow-lg"/>
+        </router-link>
       </div>
+
     </ul>
 
     <div class="md:hidden flex flex-col space-y-1 cursor-pointer" @click="toggleMenu">
@@ -98,3 +106,5 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 </style>
+
+
