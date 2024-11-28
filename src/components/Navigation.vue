@@ -23,10 +23,18 @@
       <li><router-link to="/about" class="hover:text-[#FD7F20] hover:bg-white py-2 md:py-0">About Us</router-link></li>
 
       <!-- Tampilkan Login/Register jika belum login -->
-      <div class="flex space-x-2">
-        <router-link to="/login" class="bg-white-400 text-black py-2 px-4 rounded-full border-2 border-black hover:bg-[#FFAE00]">Log in</router-link>
-        <router-link to="/register" class="bg-[#FFAE00] text-black py-2 px-4 rounded-full border-2 border-black hover:bg-white">Register</router-link>
+      <div v-if="!isLoggedIn" class="flex space-x-2">
+        <router-link to="/login" class="bg-white-400 text-black py-2 px-4 rounded-full border-4 border-black hover:bg-[#FFAE00]">Login</router-link>
+        <router-link to="/register" class="bg-[#FFAE00] text-black py-2 px-4 rounded-full border-4 border-black hover:bg-white-400">Register</router-link>
       </div>
+
+      <!-- Tampilkan icon profil jika sudah login -->
+      <div v-else class="flex items-center space-x-4">
+        <router-link to="/aboutprofile">
+          <img src="../assets/img/iqbal.png" alt="Profile" class="w-8 h-8 rounded-full hover:shadow-lg"/>
+        </router-link>
+      </div>
+
     </ul>
 
     <div class="md:hidden flex flex-col space-y-1 cursor-pointer" @click="toggleMenu">
@@ -66,7 +74,7 @@ export default {
   data() {
     return {
       menuOpen: false,
-      isLoggedIn: true, // Set to true if user is logged in
+      isLoggedIn: false, // Set to true if user is logged in
     };
   },
   methods: {
