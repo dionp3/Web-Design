@@ -46,8 +46,6 @@ export default {
 };
 </script>
 
-
-
 <template>
   <div>
     <!-- Hero Section -->
@@ -57,14 +55,14 @@ export default {
     >
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <div
-        class="relative flex flex-col items-center justify-center h-full space-y-8 text-center"
+        class="relative flex flex-col items-center justify-center h-full space-y-8 text-center px-6 md:px-12"
       >
-        <h1 class="text-4xl md:text-9xl font-bold">
+        <h1 class="text-4xl md:text-6xl font-bold">
           KREASI KITA
         </h1>
-        <h1 class="text-4xl md:text-6xl font-bold">
+        <h2 class="text-2xl md:text-4xl font-semibold">
           Discover, Support, and Create
-        </h1>
+        </h2>
         <p class="text-lg md:text-xl max-w-2xl">
           Kreasi Kita is your platform to explore amazing creations, support
           talented creators, and become part of a vibrant community.
@@ -79,7 +77,7 @@ export default {
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-gradient-to-r from-orange-500 to-yellow-400 text-center">
+    <section class="py-16 bg-gradient-to-r from-orange-500 to-yellow-400 text-center px-6 md:px-12">
       <div class="container mx-auto">
         <h2 class="text-4xl font-extrabold text-white mb-12">What We Offer</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -117,12 +115,11 @@ export default {
       </div>
     </section>
 
-
     <!-- Popular Books Section -->
     <section class="py-16 bg-white">
       <div class="container mx-auto text-center">
         <h2 class="text-3xl font-bold mb-8">Popular Books</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           <Book
             v-for="(book, index) in books"
             :key="index"
@@ -141,7 +138,7 @@ export default {
       style="background-image: url('bgImage.jpg')"
     >
       <div class="absolute inset-0 "></div>
-      <div class="relative z-10">
+      <div class="relative z-10 px-6 md:px-12">
         <h2 class="text-4xl font-bold mb-4">
           Become Part of Our Creator Community!
         </h2>
@@ -154,11 +151,10 @@ export default {
         >
           Register Now
         </button>
-
       </div>
     </section>
-
+    
     <!-- Footer Section -->
+    <Footer />
   </div>
 </template>
-
