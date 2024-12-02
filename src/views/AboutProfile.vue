@@ -1,29 +1,63 @@
 <template>
-    <div class="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 bg-white">
-      <!-- Profile Section -->
-      <div class="flex justify-center relative flex-col md:flex-row items-center md:space-x-80 mb-12">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">Iqbal Fahrozi</h1>
-        <img src="../assets/img/Iqbal.png" alt="Profile" class="w-32 h-32 rounded-full object-cover mb-8" />
-      </div>
-      <div class="max-w-2xl text-justify text-gray-700">
-        <p class="text-lg font-semibold text-gray-600 mb-2">Bio</p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget vehicula lectus. Vivamus accumsan maximus nunc at eleifend. In hac habitasse platea dictumst. Nam vehicula consequat augue, id sagittis felis consequat a. Nullam rutrum scelerisque dolor nec pharetra. Donec id felis at augue lacinia fermentum. Ut et nisi in libero sagittis pharetra non et ipsum. Pellentesque porttitor nunc quis lectus placerat, in gravida lectus feugiat.
-        </p>
-        <p class="mt-4">
-          Phasellus fermentum augue et lectus scelerisque, eget tincidunt velit laoreet. Integer tincidunt nunc nec orci mollis venenatis. Proin vehicula lacus et sapien gravida, ut suscipit enim tincidunt. Nullam cursus libero at dolor vehicula, a mollis augue ultrices.
-        </p>
+  <div class="font-roboto">
+    <div class="min-h-screen bg-white flex justify-center items-center">
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden max-w-3xl w-full p-8">
+        <!-- Profile Image and Name Section -->
+        <div class="text-center mb-8">
+          <img 
+            src="../assets/img/Iqbal.png" 
+            alt="Profile"
+            class="w-36 h-36 rounded-full object-cover mx-auto border-4 border-orange-500 shadow-md transform hover:scale-105 transition-all"
+          />
+          <h1 class="text-4xl font-bold text-gray-900 mt-4">Iqbal Fahrozi</h1>
+          <p class="text-xl text-gray-500 mt-2">Frontend Developer & Designer</p>
+        </div>
+
+        <!-- Bio Section -->
+        <div class="text-gray-700 text-lg leading-relaxed">
+          <p class="font-semibold text-gray-600 mb-4">Bio</p>
+          <p class="mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget vehicula lectus. Vivamus accumsan maximus nunc at eleifend. In hac habitasse platea dictumst. Nam vehicula consequat augue, id sagittis felis consequat a. Nullam rutrum scelerisque dolor nec pharetra. Donec id felis at augue lacinia fermentum.
+          </p>
+          <p class="mb-8">
+            Phasellus fermentum augue et lectus scelerisque, eget tincidunt velit laoreet. Integer tincidunt nunc nec orci mollis venenatis. Proin vehicula lacus et sapien gravida, ut suscipit enim tincidunt. Nullam cursus libero at dolor vehicula, a mollis augue ultrices.
+          </p>
+
+          <!-- Contact Buttons -->
+          <div class="flex justify-center space-x-6">
+            <a 
+              href="https://wa.me/1234567890" 
+              target="_blank" 
+              class="inline-flex items-center bg-green-500 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-600 hover:scale-105 transition-all"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l4 4-4 4M21 7l-4 4 4 4" />
+              </svg>
+              WhatsApp
+            </a>
+            <a 
+              href="https://instagram.com/iqbalfahrozi" 
+              target="_blank" 
+              class="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-pink-600 hover:to-purple-600 hover:scale-105 transition-all"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              Instagram
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: "AboutProfile",
-  };
-  </script>
-  
-  <style scoped>
-  /* Custom styling jika diperlukan */
-  </style>
-  
+  </div>
+</template>
+
+<script>
+export default {
+  name: "AboutProfile",
+};
+</script>
+
+<style scoped>
+</style>

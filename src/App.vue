@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" class="font-sans bg-color=white">
     <Navbar />
-    <router-view class="pt-28"/>
+    <router-view class="pt-28" />
     <Footer />
   </div>
 </template>
@@ -11,28 +11,14 @@ import Navbar from "./components/Navigation.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Navbar,
-    Footer
+    Footer,
   },
 };
 </script>
 
-<style>
-  body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: beige;
-  }
+<style scoped>
 
-  #app {
-    margin: 0;
-    padding: 0;
-  }
-
-  #home, #books, #about {
-    padding: 20px;
-  }
 </style>
