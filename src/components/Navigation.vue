@@ -75,7 +75,7 @@ export default {
   data() {
     return {
       menuOpen: false,
-      isLoggedIn: true, // Set to true if user is logged in
+      isLoggedIn: false, // Set to true if user is logged in
     };
   },
   methods: {
