@@ -2,7 +2,7 @@
   <div id="app">
     <Navbar />
     <router-view class="pt-28"/>
-    <Footer />
+    <Footer/>
   </div>
 </template>
 

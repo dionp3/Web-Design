@@ -1,15 +1,10 @@
 <script>
-    import Search from '@/components/homeComponent/Search.vue';
-    import description from '@/components/homeComponent/description.vue';
-    // import books from '@/components/homeComponent/books.vue';
     import book from '@/components/Book.vue';
 
 
     export default {
         name: 'HomeView',
         components: {
-            Search,
-            description,
             book
         },
 
