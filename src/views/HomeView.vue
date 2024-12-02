@@ -59,6 +59,9 @@ export default {
       <div
         class="relative flex flex-col items-center justify-center h-full space-y-8 text-center"
       >
+        <h1 class="text-4xl md:text-9xl font-bold">
+          KREASI KITA
+        </h1>
         <h1 class="text-4xl md:text-6xl font-bold">
           Discover, Support, and Create
         </h1>
@@ -72,30 +75,40 @@ export default {
         >
           Explore Now
         </button>
-
       </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-gray-100 text-center">
+    <section class="py-16 bg-gradient-to-r from-orange-500 to-yellow-400 text-center">
       <div class="container mx-auto">
-        <h2 class="text-3xl font-bold mb-8">What We Offer</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold mb-4">Support Creators</h3>
+        <h2 class="text-4xl font-extrabold text-white mb-12">What We Offer</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 ease-in-out">
+            <div class="mb-6">
+              <span class="text-orange-500 text-3xl font-semibold">&#128075;</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Support Creators</h3>
             <p class="text-gray-600">
-              Help your favorite creators by providing financial support to
-              continue their amazing work.
+              Help your favorite creators by providing financial support to continue their amazing work.
             </p>
           </div>
-          <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold mb-4">Explore Creativity</h3>
+          <!-- Card 2 -->
+          <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 ease-in-out">
+            <div class="mb-6">
+              <span class="text-orange-500 text-3xl font-semibold">&#127911;</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Explore Creativity</h3>
             <p class="text-gray-600">
               Discover unique creations from talented creators worldwide.
             </p>
           </div>
-          <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold mb-4">Join Community</h3>
+          <!-- Card 3 -->
+          <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 ease-in-out">
+            <div class="mb-6">
+              <span class="text-orange-500 text-3xl font-semibold">&#128101;</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Join Community</h3>
             <p class="text-gray-600">
               Connect with creators and fans to share and grow your passion.
             </p>
@@ -103,6 +116,7 @@ export default {
         </div>
       </div>
     </section>
+
 
     <!-- Popular Books Section -->
     <section class="py-16 bg-white">

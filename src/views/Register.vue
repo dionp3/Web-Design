@@ -45,7 +45,7 @@
         <!-- Link Login -->
         <p class="text-center mt-4 text-gray-500">
           Already have an account? 
-          <a href="#" class="text-orange-500 hover:underline">Login</a>
+          <a href="/login" class="text-orange-500 hover:underline">Login</a>
         </p>
       </div>
     </div>
