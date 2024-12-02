@@ -1,28 +1,15 @@
 <template>
-    <footer class="footer footer-start">
-      <div class="container">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div>
-            <span class="footer-title">Services</span>
-            <a class="link link-hover" href="#">Service 1</a>
-            <a class="link link-hover" href="#">Service 2</a>
-            <a class="link link-hover" href="#">Service 3</a>
-          </div>
-          <div>
-            <span class="footer-title">About Us</span>
-            <a class="link link-hover" href="#">Our Story</a>
-            <a class="link link-hover" href="#">Team</a>
-            <a class="link link-hover" href="#">Careers</a>
-          </div>
-          <div>
-            <span class="footer-title">Contact Us</span>
-            <a class="link link-hover" href="#">Contact Form</a>
-            <a class="link link-hover" href="#">Email</a>
-            <a class="link link-hover" href="#">Phone</a>
+    <footer class="footer footer-start bg-[#FDB750]">
+      <div class="container-center">
+        <div class="flex justify-center items-center flex-cols-1 md:flex-cols-2 lg:flex-cols-3 gap-4">
+          <img src="@/assets/img/Logo.png" alt="Logo Kreasi Kita" class="h-10 mt-8 mb-8" />
+          <div class="divider"></div>
+            <p class="text-black mt-10 mb-8">© 2024 All Kreasi Kita Kelompok 4 Desain Web B</p>
           </div>
         </div>
-        <div class="divider"></div>
-        <p class="text-center mt-4">Copyright © 2023 - All rights reserved.</p>
-      </div>
     </footer>
   </template>
+
+<style>
+
+</style>
