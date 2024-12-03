@@ -2,7 +2,7 @@
   <nav
     :class="[
       'fixed w-full z-50 flex items-center justify-between p-4 shadow-lg transition-all duration-300',
-      isScrolled ? 'bg-transparent text-white' : 'bg-white text-black',
+      isScrolled ? 'bg-white/20 text-white' : 'bg-white text-black',
     ]"
   >
     <!-- Logo -->
@@ -14,7 +14,7 @@
 
     <!-- Navigation Links -->
     <ul
-      :class="[menuOpen ? 'block flex-col absolute top-16 right-0 w-full bg-gray-100 py-4 md:py-0 md:bg-transparent' : 'hidden', 'md:flex space-x-6 items-center']"
+      :class="[menuOpen ? 'block flex-col absolute top-16 right-0 w-full bg-gray-100 py-4 md:py-0 md:bg-transparent' : 'hidden', 'md:flex space-x-6 items-center justify-center']"
       class="text-center"
     >
       <li>
@@ -29,7 +29,7 @@
         <router-link to="/login" class="bg-white-400 text-black py-2 px-4 rounded-full border-2 border-black hover:bg-[#FFAE00]">Log in</router-link>
         <router-link to="/register" class="bg-[#FFAE00] text-black py-2 px-4 rounded-full border-2 border-black hover:bg-white">Register</router-link>
       </div>
-      <div v-else class="relative flex items-center space-x-4">
+      <div v-else class="relative flex justify-center items-center space-x-4 p-2">
         <img 
           src="../assets/img/iqbal.png" 
           alt="Profile" 

@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto p-6 bg-white">
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div class="grid mt-20 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       <Book
         v-for="(book, index) in books"
         :key="index"

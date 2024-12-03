@@ -1,8 +1,8 @@
 <template>
-  <div class="font-roboto">
+  <div class="font-roboto ">
     <div class="bg-white min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
       <!-- Logo and Description Section -->
-      <h1 class="text-4xl font-extrabold text-gray-900 mb-10 text-center">About Us</h1>
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-10 text-center mt-20">About Us</h1>
       <div class="logo flex flex-col gap-10 md:flex-row items-center md:space-x-8 mb-16">
         <img src="@/assets/img/Logo.png" alt="Logo Kreasi Kita" class="h-40 mb-4 md:mb-0" />
         <div class="text-center md:text-left max-w-lg">

@@ -1,7 +1,7 @@
 <template>
   <div class="font-roboto">
     <div class="min-h-screen bg-white flex justify-center items-center">
-      <div class="bg-white shadow-lg rounded-lg overflow-hidden max-w-3xl w-full p-8">
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden max-w-3xl w-full p-8 mt-20">
         <!-- Profile Image and Name Section -->
         <div class="text-center mb-8">
           <img 
