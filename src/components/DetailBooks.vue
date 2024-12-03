@@ -13,17 +13,16 @@
 
       <!-- Buttons -->
       <div class="mt-4 flex space-x-7 justify-start">
-        <button class="bg-[#FDB750] text-black px-20 py-2 rounded-lg shadow-md hover:bg-[#e5a741] transition-colors">
+        <button 
+          @click="showAlert('Buyed')" 
+          class="bg-[#FDB750] text-black px-20 py-2 rounded-lg shadow-md hover:bg-[#e5a741] transition-colors"
+        >
           Buy
         </button>
-        <button class="bg-[#FDB750] text-black px-20 py-2 rounded-lg shadow-md hover:bg-[#e5a741] transition-colors">
-          + Cart
-        </button>
-      </div>
-
-      <!-- Tips Button -->
-      <div class="mt-6 flex justify-start">
-        <button class="bg-[#FDB750] text-black px-44 py-2 rounded-lg shadow-md hover:bg-[#e5a741] transition-colors">
+        <button 
+          @click="showAlert('Thank you')" 
+          class="bg-[#FDB750] text-black px-20 py-2 rounded-lg shadow-md hover:bg-[#e5a741] transition-colors"
+        >
           Give Tips
         </button>
       </div>
@@ -55,6 +54,12 @@ export default {
     return {
       book: {}, 
     };
+  },
+
+  methods: {
+    showAlert(message) {
+      alert(message); // Menampilkan alert dengan pesan yang diterima
+    },
   },
 
   mounted() {

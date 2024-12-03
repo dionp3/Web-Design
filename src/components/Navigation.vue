@@ -7,18 +7,9 @@
   >
     <!-- Logo -->
     <div class="flex items-center space-x-4">
-      <router-link to="/" class="w-30 h-12 hover:bg-white">
+      <router-link to="/" class="w-30 h-12 rounded-full py-2 px-4 hover:bg-white">
         <img src="../assets/img/Logo.png" alt="Logo" class="w-full h-full object-contain" />
       </router-link>
-    </div>
-
-    <!-- Search Bar -->
-    <div class="w-1/3">
-      <input
-        type="text"
-        placeholder="Search..."
-        class="w-full p-2 rounded-full bg-gray-200 border-2 border-black text-black focus:outline-none focus:ring focus:ring-yellow-400"
-      />
     </div>
 
     <!-- Navigation Links -->
@@ -27,10 +18,10 @@
       class="text-center"
     >
       <li>
-        <router-link to="/books" class="text-black hover:text-[#FD7F20] hover:bg-white py-2 md:py-0">Books</router-link>
+        <router-link to="/books" class="text-black rounded-full px-4 hover:text-[#FD7F20] hover:bg-white py-2 md:py-0">Books</router-link>
       </li>
       <li>
-        <router-link to="/about" class="text-black hover:text-[#FD7F20] hover:bg-white py-2 md:py-0">About Us</router-link>
+        <router-link to="/about" class="text-black rounded-full px-4 hover:text-[#FD7F20] hover:bg-white py-2 md:py-0">About Us</router-link>
       </li>
 
       <!-- Auth Links -->
