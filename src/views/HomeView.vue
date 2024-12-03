@@ -1,5 +1,4 @@
 <script>
-import Footer from "@/components/Footer.vue";
 import Book from "@/components/Book.vue";
 
 export default {
