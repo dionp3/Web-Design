@@ -1,8 +1,19 @@
 <template>
   <div class="container mx-auto p-6 bg-white">
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Search Bar -->
+    <div class="flex justify-center mt-20 mb-6">
+      <input
+        v-model="searchQuery"
+        type="text"
+        placeholder="Search for books..."
+        class="w-full max-w-lg px-4 py-2 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+      />
+    </div>
+
+    <!-- Book List -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-6 gap-6">
       <Book
-        v-for="(book, index) in books"
+        v-for="(book, index) in filteredBooks"
         :key="index"
         :id="book.id"
         :image="book.image"
@@ -12,7 +23,6 @@
     </div>
   </div>
 </template>
-
   
 <script>
   import Book from "../components/Book.vue"
@@ -25,6 +35,7 @@
 
     data(){
       return{
+        searchQuery: "",
         books: [
           {
             id: '1',
@@ -146,8 +157,16 @@
             title: "Untuk Kamu yang Lelah dan Hampir Menyerah",
             price: 'Rp 59.000'
           },
-        ]
-      }
+        ],
+      };
+    },
+
+    computed: {
+      filteredBooks() {
+        return this.books.filter((book) =>
+          book.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+        );
+      },
     },
   };
 </script>

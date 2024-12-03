@@ -30,9 +30,7 @@
               target="_blank" 
               class="inline-flex items-center bg-green-500 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-600 hover:scale-105 transition-all"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l4 4-4 4M21 7l-4 4 4 4" />
-              </svg>
+              <span class="text-lg mr-2">📱</span>
               WhatsApp
             </a>
             <a 
@@ -40,13 +38,11 @@
               target="_blank" 
               class="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-pink-600 hover:to-purple-600 hover:scale-105 transition-all"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4z" />
-                <circle cx="12" cy="12" r="3" />
-              </svg>
+              <span class="text-lg mr-2">📷</span>
               Instagram
             </a>
           </div>
+
         </div>
       </div>
     </div>

@@ -11,9 +11,6 @@
           </p>
         </div>
 
-        <!-- Divider -->
-        <div class="hidden md:block md:h-12 md:border-l-2 md:border-black mx-6"></div>
-
         <!-- Additional Links or Info (Optional) -->
         <div class="flex flex-col items-center mt-8 md:mt-0 md:items-end">
           <!-- You can add additional links here if needed -->

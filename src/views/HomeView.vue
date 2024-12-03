@@ -94,11 +94,11 @@ export default {
           <!-- Card 2 -->
           <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 ease-in-out">
             <div class="mb-6">
-              <span class="text-orange-500 text-3xl font-semibold">&#127911;</span>
+              <span class="text-orange-500 text-3xl font-semibold">&#128640;</span>
             </div>
             <h3 class="text-2xl font-semibold text-gray-800 mb-4">Explore Creativity</h3>
             <p class="text-gray-600">
-              Discover unique creations from talented creators worldwide.
+              Discover unique creations from talented creators.
             </p>
           </div>
           <!-- Card 3 -->

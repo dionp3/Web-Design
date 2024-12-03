@@ -1,10 +1,11 @@
 <template>
   <nav
-    :class="[
-      'fixed w-full z-50 flex items-center justify-between p-4 shadow-lg transition-all duration-300',
-      isScrolled ? 'bg-transparent text-white' : 'bg-white text-black',
-    ]"
-  >
+  :class="[ 
+    'fixed w-full z-50 flex items-center justify-between p-4 shadow-lg transition-all duration-300',
+    isScrolled ? 'bg-white/70 text-black' : 'bg-white text-black',
+  ]"
+>
+
     <!-- Logo -->
     <div class="flex items-center space-x-4">
       <router-link to="/" class="w-30 h-12 rounded-full py-2 px-4 hover:bg-white">
