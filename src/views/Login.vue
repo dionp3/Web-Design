@@ -45,7 +45,7 @@
         <!-- Link Register dan Lupa Password -->
         <p class="text-center mt-4 text-gray-500">
           Don’t have an account?
-          <a href="#" class="text-orange-500 hover:underline">Register</a>
+          <a href="/register" class="text-orange-500 hover:underline">Register</a>
         </p>
         <p class="text-center text-gray-500 mt-2">
           <a href="#" class="text-orange-500 hover:underline">Forgot password?</a>

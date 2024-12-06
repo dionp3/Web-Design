@@ -1,15 +1,26 @@
 <template>
-    <footer class="footer footer-start bg-[#FDB750]">
-      <div class="container-center">
-        <div class="flex justify-center items-center flex-cols-1 md:flex-cols-2 lg:flex-cols-3 gap-4">
-          <img src="@/assets/img/Logo.png" alt="Logo Kreasi Kita" class="h-10 mt-8 mb-8" />
-          <div class="divider"></div>
-            <p class="text-black mt-10 mb-8">© 2024 All Kreasi Kita Kelompok 4 Desain Web B</p>
-          </div>
+  <footer class="bg-orange-500 py-10">
+    <div class="container mx-auto px-6">
+      <!-- Footer Content -->
+      <div class="flex flex-col items-center justify-center md:flex-row md:justify-between">
+        <!-- Logo Section -->
+        <div class="flex flex-col items-center md:items-start">
+          <img src="@/assets/img/Logo.png" alt="Logo Kreasi Kita" class="h-14 mb-4" />
+          <p class="text-black text-sm md:text-base text-center md:text-left">
+            © 2024 All Kreasi Kita
+          </p>
         </div>
-    </footer>
-  </template>
 
-<style>
+        <!-- Additional Links or Info (Optional) -->
+        <div class="flex flex-col items-center mt-8 md:mt-0 md:items-end">
+          <!-- You can add additional links here if needed -->
+          <p class="text-black text-xs md:text-sm">Designed by Team 4 Web Design B</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
 
+<style scoped>
+/* Add any custom styles here if needed */
 </style>

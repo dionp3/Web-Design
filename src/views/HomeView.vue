@@ -49,86 +49,114 @@
 </script>
 
 <template>
-    <div>
-      <section class="relative py-12 px-4" style="background-image: url('bg1.jpg')">
-        <div class="absolute inset-0 bg-white opacity-80"></div>
-        <div class="flex justify-center relative flex-col md:flex-row items-center md:space-x-20 mb-12">
-          <img src="@/assets/img/Logo.png" alt="Kreasi Kita" class="h-40 mt-40 mb-0 md:mb-0" />
-          <div class="text-center md:text-left max-w-lg">
-            <p class="text-lg text-justify text-gray-600 mt-40 mb-0">
-              Kreasi Kita is a platform for creators to market and sell their work, while allowing fans to provide ongoing financial support to their favorite creators. In this way, creators can earn revenue directly from fans, which support them to continue creating.
+  <div>
+    <!-- Hero Section -->
+    <section
+      class="relative h-screen bg-cover bg-center text-white"
+      style="background-image: url('bg1.jpg')"
+    >
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div
+        class="relative flex flex-col items-center justify-center h-full space-y-8 text-center px-6 md:px-12"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold">
+          KREASI KITA
+        </h1>
+        <h2 class="text-2xl md:text-4xl font-semibold">
+          Discover, Support, and Create
+        </h2>
+        <p class="text-lg md:text-xl max-w-2xl">
+          Kreasi Kita is your platform to explore amazing creations, support
+          talented creators, and become part of a vibrant community.
+        </p>
+        <button
+          @click="$router.push('/books')"
+          class="px-6 py-3 bg-[#FDB750] hover:bg-yellow-600 rounded-full text-black font-semibold"
+        >
+          Explore Now
+        </button>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gradient-to-r from-orange-500 to-yellow-400 text-center px-6 md:px-12">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-extrabold text-white mb-12">What We Offer</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 ease-in-out">
+            <div class="mb-6">
+              <span class="text-orange-500 text-3xl font-semibold">&#128075;</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Support Creators</h3>
+            <p class="text-gray-600">
+              Help your favorite creators by providing financial support to continue their amazing work.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 ease-in-out">
+            <div class="mb-6">
+              <span class="text-orange-500 text-3xl font-semibold">&#128640;</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Explore Creativity</h3>
+            <p class="text-gray-600">
+              Discover unique creations from talented creators.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div class="p-8 bg-white rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 duration-300 ease-in-out">
+            <div class="mb-6">
+              <span class="text-orange-500 text-3xl font-semibold">&#128101;</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Join Community</h3>
+            <p class="text-gray-600">
+              Connect with creators and fans to share and grow your passion.
             </p>
           </div>
         </div>
-        <div class="flex justify-center relative flex-col gap-20 md:flex-row items-center md:space-x-8 mb-12">
-          <button class="mt-8 bg-[#FDB750] hover:bg-yellow-600 text-black font-semibold py-2 px-4 rounded-full">
-            Explore Creations ➜
-          </button>
-        </div>
-      </section>
-    </div>
-    
-    <div>
-      <section class="flex justify-around bg-red-500 text-white py-4">
-        <button class="font-semibold">Support</button>
-        <button class="font-semibold">Creative</button>
-        <button class="font-semibold">Community</button>
-      </section>
-    </div>
-      
-    <div>
-      <section class="relative py-12 px-4 bg-white opacity-80" style="background-image: url('bgImage.jpg')">
-        <div class="flex overflow-x-auto gap-4">
-          <div class="min-w-full bg-white rounded-lg shadow p-4 mt-40 mb-40 text-center">
-            <h2 class="text-2xl text-black font-bold text-left mb-8">Populer</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 ">
-              <book 
-                v-for="(book, index) in books" 
-                :key="index"
-                :id="book.id"
-                :image="book.image"
-                :title="book.title"
-                :price="book.price"/>
-            </div>
-          </div>
-          <!-- Repeat for other book items -->
-        </div>
-      </section>
-    </div>
-    
-    <div>
-      <section class="bg-orange-500 text-white py-12 px-4">
-        
-        <h2 class="text-2xl font-semibold text-black text-left mb-8">Creator</h2>
-        <div class="border rounded-lg p-4 shadow-md hover:shadow-lg transition">
-          <img :src="image" alt="creator cover" class="h-80 w-full object-fill rounded-md mb-4" />
-          <h3 class="text-lg font-semibold text-gray-800 mb-2"></h3>
-          <p class="text-gray-600 text-sm"></p>
-        </div>
-        <!-- <div class="flex overflow-x-auto gap-4">
-          <div class="min-w-[100px] flex flex-col items-center">
-            <img src="../assets/img/bg-img.jpeg" alt="Creator" class="h-24 w-24 rounded-full" />
-            <p class="mt-4 font-semibold">Aj</p>
-          </div> -->
-          <!-- Repeat for other creators -->
-        <!-- </div> -->
-      </section>
-    </div>
+      </div>
+    </section>
 
-    <div>
-      <!-- Join Section -->
-      <section class="relative py-12 text-center" style="background-image: url('bg1.jpg')">
-        <div class="absolute inset-0 bg-white opacity-80"></div>
-        <div class="flex justify-center relative flex-col gap-20 md:flex-row items-center md:space-x-8 mb-5">
-          <h2 class="text-2xl text-[#FD7F20] font-bold mt-8 mb-8">Join Kreasi Kita and be part of the creator and fan community!</h2>
+    <!-- Popular Books Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Popular Books</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          <Book
+            v-for="(book, index) in books"
+            :key="index"
+            :id="book.id"
+            :image="book.image"
+            :title="book.title"
+            :price="book.price"
+          />
         </div>
-        <div class="flex justify-center relative flex-col gap-20 md:flex-row items-center md:space-x-8 mb-5">
-          <button class="mt-8 mb-8 bg-[#FDB750] hover:bg-yellow-600 text-black font-semibold py-2 px-4 rounded-full">
-            Register here ➜
-          </button>
-        </div>
-      </section>
-    </div>
-      <!-- Footer Component -->
-      <Footer />
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section
+      class="relative py-16 text-center text-white bg-cover bg-center"
+      style="background-image: url('bgImage.jpg')"
+    >
+      <div class="absolute inset-0 "></div>
+      <div class="relative z-10 px-6 md:px-12">
+        <h2 class="text-4xl font-bold mb-4">
+          Become Part of Our Creator Community!
+        </h2>
+        <p class="text-lg mb-8">
+          Join Kreasi Kita today and start your journey as a creator or fan.
+        </p>
+        <button
+          @click="$router.push('/register')"
+          class="px-6 py-3 bg-[#FDB750] hover:bg-yellow-600 rounded-full text-black font-semibold"
+        >
+          Register Now
+        </button>
+      </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <Footer />
+  </div>
 </template>
