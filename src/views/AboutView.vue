@@ -28,7 +28,7 @@
 
         <cardsTeam 
           v-for="member in members"
-          :key="member.id"
+          :id="member.id"
           :image="member.image"
           :name="member.name"
           :peran="member.peran"

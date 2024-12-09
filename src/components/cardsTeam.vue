@@ -35,7 +35,7 @@
 
         methods: {
             goToDetailMember(){
-
+                this.$router.push(`/members/${this.id}`);
             },
         },
     }

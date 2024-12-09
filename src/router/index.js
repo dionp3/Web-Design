@@ -6,6 +6,7 @@ import AboutProfile from '../views/AboutProfile.vue';
 import Login from '@/views/Login.vue';
 import Register from '@/views/Register.vue';
 import DetailBooks from "../components/DetailBooks.vue";
+import detailCards from '@/components/detailCards.vue';
 
 const routes = [
   {
@@ -45,8 +46,10 @@ const routes = [
     props: true,
   },
   {
-    // path: 'members/:id',
-
+    path: '/members/:id',
+    name: 'detailCards',
+    component: detailCards,
+    props: true,
   },
 ];
 
