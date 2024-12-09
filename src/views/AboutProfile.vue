@@ -30,7 +30,7 @@
               target="_blank" 
               class="inline-flex items-center bg-green-500 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-600 hover:scale-105 transition-all"
             >
-              <span class="text-lg mr-2">📱</span>
+              <img src="../assets/icons/whatsapp-icon.png" alt="WhatsApp Icon" class="w-6 h-6 mr-2" />
               WhatsApp
             </a>
             <a 
@@ -38,7 +38,7 @@
               target="_blank" 
               class="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-pink-600 hover:to-purple-600 hover:scale-105 transition-all"
             >
-              <span class="text-lg mr-2">📷</span>
+              <img src="../assets/icons/instagram-icon.png" alt="Instagram Icon" class="w-6 h-6 mr-2" />
               Instagram
             </a>
           </div>
