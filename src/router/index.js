@@ -44,6 +44,10 @@ const routes = [
     component: DetailBooks,
     props: true,
   },
+  {
+    // path: 'members/:id',
+
+  },
 ];
 
 const router = createRouter({

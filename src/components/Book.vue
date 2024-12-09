@@ -37,7 +37,4 @@
   }
 </script>
   
-<style scoped>
-  /* Scoped CSS if any additional customization needed */
-</style>
   

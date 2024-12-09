@@ -1,14 +1,15 @@
 <template>
-  <div class="container mx-auto mb-8 h-full p-6 flex flex-col md:flex-row items-center gap-4 justify-center">
+  <div class="w-full md:w-3/4 mx-auto p-6 flex flex-col md:flex-row items-center gap-6 justify-center min-h-screen">
     <!-- Gambar Buku -->
-    <div class="img-book">
-      <img :src="book.image" :alt="book.title" class="h-full max-h-96 w-full object-contain rounded-md shadow-md mb-4" />
+    <div class="w-full md:w-1/3 mb-6 md:mb-0">
+      <img :src="book.image" :alt="book.title" class="object-contain rounded-lg shadow-lg w-4/5 mx-auto h-auto" />
     </div>
 
     <!-- Detail Buku -->
-    <div class="detail-book flex flex-col md:flex-1 max-w-96">
-      <h1 class="text-3xl font-bold text-gray-900">{{ book.title }}</h1>
-      <p class="text-xl text-gray-600 mt-2">{{ book.price }}</p>
+    <div class="flex flex-col w-full max-w-md">
+      <!-- Title and Price -->
+      <h1 class="text-xl font-semibold text-gray-900">{{ book.title }}</h1>
+      <p class="text-lg text-gray-600 mt-1">{{ book.price }}</p>
 
       <!-- Buttons -->
       <div class="mt-4 flex space-x-7 justify-start">
@@ -231,15 +232,5 @@ export default {
 </script>
 
 <style scoped>
-  .container{
-    border: 1px solid black;
-  }
 
-  .img-book{
-    border: 1px solid black;
-  }
-
-  .detail-book{
-    border: 1px solid black;
-  }
 </style>

@@ -1,51 +1,48 @@
 <script>
-    import book from '@/components/Book.vue';
+import Book from "@/components/Book.vue";
 
-
-    export default {
-        name: 'HomeView',
-        components: {
-            book
+export default {
+  name: "HomeView",
+  components: {
+    Book,
+  },
+  data() {
+    return {
+      books: [
+        {
+          id: "1",
+          image: "img_books/romeo_and_juliet.jpg",
+          title: "Romeo & Juliet",
+          price: "Rp 100.000",
         },
-
-        data(){
-          return{
-            books: [
-              {
-                id: '1',
-                image: 'img_books/romeo_and_juliet.jpg',
-                title: 'Romeo & Juliet',
-                price: 'Rp 100.000'
-              },
-              {
-                id: '2',
-                image: 'img_books/atomic_habits.jpg',
-                title: 'Atomic Habits',
-                price: 'Rp 98.500'
-              },
-              {
-                id: '3',
-                image: 'img_books/to_kill_a_mockingbird.jpg',
-                title: 'To Kill a Mockingbird',
-                price: 'Rp 156.000'
-              },
-              {
-                id: '4',
-                image: 'img_books/thinking_fast_and_slow.jpg',
-                title: 'Thinking, Fast and Slow',
-                price: 'Rp 148.000'
-              },
-              {
-                id: '5',
-                image: 'img_books/rich_dad_poor_dad.jpg',
-                title: 'Rich Dad Poor Dad',
-                price: 'Rp 173.938'
-              },
-            ]
-          }
-        }
-        
+        {
+          id: "2",
+          image: "img_books/atomic_habits.jpg",
+          title: "Atomic Habits",
+          price: "Rp 98.500",
+        },
+        {
+          id: "3",
+          image: "img_books/to_kill_a_mockingbird.jpg",
+          title: "To Kill a Mockingbird",
+          price: "Rp 156.000",
+        },
+        {
+          id: "4",
+          image: "img_books/thinking_fast_and_slow.jpg",
+          title: "Thinking, Fast and Slow",
+          price: "Rp 148.000",
+        },
+        {
+          id: "5",
+          image: "img_books/rich_dad_poor_dad.jpg",
+          title: "Rich Dad Poor Dad",
+          price: "Rp 173.938",
+        },
+      ],
     };
+  },
+};
 </script>
 
 <template>

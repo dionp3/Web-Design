@@ -17,35 +17,51 @@
       <div class="text-center mb-16">
         <h2 class="text-2xl font-semibold text-gray-900">Meet Our Team</h2>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10">
-        <!-- Member Card -->
-        <div v-for="member in members" :key="member.id" class="text-center group hover:bg-gray-100 p-4 rounded-lg shadow-md transition-all duration-300">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        
+        <!-- <div v-for="member in members" :key="member.id" class="text-center group hover:bg-gray-100 p-4 rounded-lg shadow-md transition-all duration-300">
           <img :src="member.image" :alt="member.name" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover group-hover:scale-105 transition-transform duration-300" />
           <h3 class="text-lg font-medium text-gray-800">{{ member.name }}</h3>
           <p class="text-sm text-gray-600">{{ member.id }}</p>
-        </div>
+        </div> -->
+
+        <cardsTeam 
+          v-for="member in members"
+          :key="member.id"
+          :image="member.image"
+          :name="member.name"
+          :peran="member.peran"
+          :teknologi="member.teknologi"
+        />
       </div>
+
+
     </div>
   </div>
 </template>
 
 <script>
+import cardsTeam from '@/components/cardsTeam.vue';
+
 export default {
   name: "AboutUs",
+
+  components: {
+    cardsTeam,
+  },
+
   data() {
     return {
       members: [
-        { id: "11221030", name: "Wiranto", image: "img_about_us/Wiranto.png" },
-        { id: "11221070", name: "Glen Gladly Gessong", image: "img_about_us/Glenn.png" },
-        { id: "11221058", name: "Dion Prayoga", image: "img_about_us/Dion2.png" },
-        { id: "11221034", name: "Iqbal Fahrozi", image: "img_about_us/Iqbal.png" },
-        { id: "11221022", name: "Hanafi Mas'uul P.", image: "img_about_us/Hanafi.png" },
+        { id: "11221030", name: "Wiranto", image: "img_about_us/Wiranto.png" ,peran: "Frontend Developer", teknologi:"Vue.js"},
+        { id: "11221070", name: "Glen Gladly Gessong", image: "img_about_us/Glenn.png" ,peran: "Frontend Developer", teknologi:"Vue.js"},
+        { id: "11221058", name: "Dion Prayoga", image: "img_about_us/Dion2.png" ,peran: "Frontend Developer", teknologi:"Vue.js"},
+        { id: "11221034", name: "Iqbal Fahrozi", image: "img_about_us/Iqbal.png" ,peran: "Frontend Developer", teknologi:"Vue.js"},
+        { id: "11221022", name: "Hanafi Mas'uul P.", image: "img_about_us/Hanafi.png" ,peran: "Frontend Developer", teknologi:"Vue.js"},
       ],
     };
   },
 };
 </script>
 
-<style scoped>
-/* Semua styling sudah menggunakan Tailwind CSS */
-</style>

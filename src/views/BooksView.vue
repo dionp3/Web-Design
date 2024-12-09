@@ -170,6 +170,3 @@
     },
   };
 </script>
-
-<style>
-</style>
