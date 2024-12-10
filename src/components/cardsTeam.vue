@@ -111,7 +111,7 @@
           name: "Wiranto",
           peran: "Frontend Developer",
           deskripsi: "GLORY GLORY MANCHESTER CITY",
-          wa: "https://wa.me/+62 813-4838-3245",
+          wa: "https://wa.me/6281348383245",
           ig: "https://instagram.com/wiiranto_",
         },
         {
@@ -120,7 +120,7 @@
           name: "Glenn Gladly Gessong",
           peran: "Frontend Developer",
           deskripsi: "Love Coding",
-          wa: "https://wa.me/+62 813-9560-2460",
+          wa: "https://wa.me/6281395602460",
           ig: "https://instagram.com/glenngladly._",
         },
         {
@@ -130,7 +130,7 @@
           peran: "Frontend Developer",
           deskripsi:
             "Hello, I'm Dion Prayoga, currently studying at the Kalimantan Institute of Technology as an informatics student. I have expertise in software engineering, web development, electrical engineering, graphic design, and photography.",
-          wa: "https://wa.me/+62 811-590-976",
+          wa: "https://wa.me/62811590976",
           ig: "https://instagram.com/dionp3",
         },
         {
@@ -139,7 +139,7 @@
           name: "Iqbal Fahrozi",
           peran: "Frontend Developer",
           deskripsi: "Love Gaming",
-          wa: "https://wa.me/+62 812-5679-4893",
+          wa: "https://wa.me/6281256794893",
           ig: "https://instagram.com/iqbalfhrzii",
         },
         {
@@ -148,7 +148,7 @@
           name: "Hanafi Mas'uul P",
           peran: "Chill guy",
           deskripsi: "Chill guy",
-          wa: "https://wa.me/+62 852-4850-1177",
+          wa: "https://wa.me/6285248501177",
           ig: "https://instagram.com/fii.hans",
         },
       ];
